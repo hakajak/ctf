@@ -1,0 +1,24 @@
+This provided code is too computationally expensive to complete in a reasonable time.
+
+Looking at the code we can see that these functions are performing simple
+tasks in very roundabout ways. We can try replacing these function calls with
+the equivalent operation to drastically reduce the runtime.
+Note of caution: doing the same thing but in a different manner can sometimes
+produce different results!
+Therefore we should run a few iterations of the main loop in both the original
+and modified versions to compare the calculated value.
+
+// foo   = a + 1
+// bar   = a - 1
+// baz   = a + b
+// spam  = a - b
+// eggs  = a * b
+// merry = a / b
+// xmas  = a % b
+// hackvent = b to the power of a
+
+In addition to factoring out the basic functions into the main calculation, we
+only need to update the hackvent() value once every 42 iterations (i/42), and
+even then we only need to multiply the current value by 3 to get the new value.
+
+The solution.c code executes in under a second, giving the correct value...
